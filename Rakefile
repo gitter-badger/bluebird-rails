@@ -19,8 +19,7 @@ task javascripts: :submodule do
   target_dir = "vendor/assets/javascripts"
   FileUtils.mkdir_p target_dir
   Rake.rake_output_message "Generating JavaScripts."
-  FileUtils.cp_r Dir["#{SUBMODULE_NAME}/src/*"], target_dir
-  FileUtils.cp_r Dir["#{SUBMODULE_NAME}/dist/*"], target_dir
+  FileUtils.cp_r Dir["#{SUBMODULE_NAME}/js/browser/*"], target_dir
 end
 
 desc "Clean and then generate everything"
